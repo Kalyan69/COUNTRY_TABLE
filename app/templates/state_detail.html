@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ state.name }} Details</title>
+</head>
+<body>
+    <h1>{{ state.name }} Details</h1>
+    <p>State Name: {{ state.name }}</p>
+    <h2>Cities</h2>
+    <ul>
+        {% for city in state.city_set.all %}
+            <li><a href="{% url 'city_detail' city.id %}">{{ city.name }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

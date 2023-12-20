@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>City List</title>
+</head>
+<body>
+    <h1>City List</h1>
+    <ul>
+        {% for city in cities %}
+            <li><a href="{% url 'city_detail' city.id %}">{{ city.name }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
